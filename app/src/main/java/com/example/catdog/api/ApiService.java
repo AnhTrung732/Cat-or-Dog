@@ -1,5 +1,7 @@
 package com.example.catdog.api;
 
+import static com.example.catdog.ScanQrApiActivity.SCAN_DOMAIN;
+
 import com.example.catdog.model.Animal;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -17,7 +19,7 @@ public interface ApiService {
     // https://5e19-14-161-13-207.ap.ngrok.io/api/detectUpload
 
 
-    public static final String DOMAIN = "https://34a5-14-161-13-207.ap.ngrok.io/";
+    public static final String DOMAIN = SCAN_DOMAIN;
 
     Gson gson = new GsonBuilder().setDateFormat("yyyy MM dd HH:mm:ss").create();
 
@@ -29,7 +31,7 @@ public interface ApiService {
 
 
     @Multipart
-    @POST("api/detectUpload")
+    @POST("/api/detectUpload")
     Call<Animal> sendImageFile(@Part MultipartBody.Part file);
 
 }

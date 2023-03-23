@@ -62,4 +62,7 @@ dependencies {
     //okhttp
     implementation 'com.squareup.okhttp3:okhttp:4.9.0'
 
+    //QR scanner
+    implementation 'com.github.yuriy-budiyev:code-scanner:2.3.2'
+
 }
